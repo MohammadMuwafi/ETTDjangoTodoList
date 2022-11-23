@@ -1,0 +1,6 @@
+<form action="{% url 'todo_app:delete_all_todos' %}" method="post">
+  {% csrf_token %}
+  <input type="submit" value="delete all todos and go back" />
+</form>
+
+<a href="{% url 'todo_app:index' %}"><button>go back only</button> </a>

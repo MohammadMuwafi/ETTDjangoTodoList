@@ -1,0 +1,13 @@
+<form action="{% url 'todo_app:update_todo' %}" method="post">
+  {% csrf_token %}
+  <label for="todo_id">Todo Id:</label><br />
+  <input type="text" id="todo_id" name="todo_id" value="{{todo.id}}" readonly />
+  <br />
+  <label for="todo_title">Todo Title:</label><br />
+  <input type="text" id="todo_title" name="todo_title" value="{{todo.title}}" />
+  <br />
+  <label for="todo_title">Todo Content:</label><br />
+  <textarea name="todo_content" rows="10" cols="30">{{todo.content}}</textarea>
+  <br /><br />
+  <input type="submit" value="update" />
+</form>
